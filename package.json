@@ -1,0 +1,24 @@
+{
+  "name": "ngApi",
+  "version": "0.0.0",
+  "description": "rest api provider for angularjs",
+  "main": "api.js",
+  "scripts": {
+    "build": "coffee -bo . src/api.coffee"
+  },
+  "repository": "git+https://github.com/rabrux/ngApi.git",
+  "keywords": [
+    "angular",
+    "auth"
+  ],
+  "author": "rabrux <n3ur0n4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rabrux/ngApi/issues"
+  },
+  "homepage": "https://github.com/rabrux/ngApi#readme",
+  "private": true,
+  "devDependencies": {
+    "coffeescript": "^2.2.1"
+  }
+}

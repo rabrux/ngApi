@@ -1,0 +1,23 @@
+{
+  "name": "ngApi",
+  "authors": [
+    "rabrux <raul@alchimia.mx>"
+  ],
+  "description": "rest api provider for angularjs",
+  "main": "api.js",
+  "moduleType": [],
+  "keywords": [
+    "api",
+    "angular",
+    "module"
+  ],
+  "license": "MIT",
+  "homepage": "http://alchimia.mx",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
