@@ -1,5 +1,5 @@
 angular
-  .module 'ngApi', [ 'localStorage' ]
+  .module 'ngApi', [ 'ngLocalStorage' ]
   .provider '$api', [ ->
     {
       baseUri : ''
