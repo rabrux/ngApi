@@ -19,18 +19,15 @@ angular.module('ngApi', ['ngLocalStorage']).provider('$api', [
   function($api) {
     return $api.baseUri;
   }
-]).factory('token', [
-  '$localStorage',
-  function($db) {
-    return $db.get('token');
-  }
 ]).factory('beforeRequest', [
-  'token',
+  '$localStorage',
   'baseUri',
-  function(token,
+  function($db,
   uri) {
     return {
       request: function(config) {
+        var token;
+        token = $db.get('token');
         if (token && config.url.indexOf(uri) === 0) {
           config.headers['Authorization'] = token;
         }

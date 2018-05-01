@@ -12,17 +12,13 @@ angular
     '$api'
     ( $api ) -> $api.baseUri
   ]
-  .factory 'token', [
-    '$localStorage'
-    ( $db ) ->
-      $db.get 'token'
-  ]
   .factory 'beforeRequest', [
-    'token'
+    '$localStorage'
     'baseUri'
-    ( token, uri ) ->
+    ( $db, uri ) ->
       {
         request : ( config ) ->
+          token = $db.get 'token'
           config.headers[ 'Authorization' ] = token if token and config.url.indexOf( uri ) is 0
           config
       }
